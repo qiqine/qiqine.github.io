@@ -113,7 +113,7 @@
 
 
 
-  <meta name="keywords" content="移动端,CSS,html5,">
+  <meta name="keywords" content="javascript,">
 
 
 
@@ -126,18 +126,18 @@
 
 
 
-<meta name="description" content="在移动浏览器中实现拨打电话，调用sms发短信，发送email等功能很简单，只需要通过a href链接简单的设置即可">
-<meta name="keywords" content="移动端,CSS,html5">
+<meta name="description" content="在开发过程中常常碰到编码问题，在url访问以及参数传递过程中有：encodeURIComponent，encodeURI，escape。这些编码函数有什么区别，以及为什么需要编码，经常迷迷糊糊的用着。">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="html5特殊链接处理">
-<meta property="og:url" content="http://qiqine.github.io/2018/11/19/html5特殊链接处理/index.html">
+<meta property="og:title" content="浏览器url编码">
+<meta property="og:url" content="http://qiqine.github.io/2018/11/19/浏览器url编码/index.html">
 <meta property="og:site_name" content="judy&#39;s blog">
-<meta property="og:description" content="在移动浏览器中实现拨打电话，调用sms发短信，发送email等功能很简单，只需要通过a href链接简单的设置即可">
+<meta property="og:description" content="在开发过程中常常碰到编码问题，在url访问以及参数传递过程中有：encodeURIComponent，encodeURI，escape。这些编码函数有什么区别，以及为什么需要编码，经常迷迷糊糊的用着。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-20T12:18:28.779Z">
+<meta property="og:updated_time" content="2018-11-20T13:34:58.907Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="html5特殊链接处理">
-<meta name="twitter:description" content="在移动浏览器中实现拨打电话，调用sms发短信，发送email等功能很简单，只需要通过a href链接简单的设置即可">
+<meta name="twitter:title" content="浏览器url编码">
+<meta name="twitter:description" content="在开发过程中常常碰到编码问题，在url访问以及参数传递过程中有：encodeURIComponent，encodeURI，escape。这些编码函数有什么区别，以及为什么需要编码，经常迷迷糊糊的用着。">
 
 
 
@@ -167,13 +167,13 @@
 
 
 
-  <link rel="canonical" href="http://qiqine.github.io/2018/11/19/html5特殊链接处理/">
+  <link rel="canonical" href="http://qiqine.github.io/2018/11/19/浏览器url编码/">
 
 
 
 
 
-  <title>html5特殊链接处理 | judy's blog</title>
+  <title>浏览器url编码 | judy's blog</title>
   
 
 
@@ -310,7 +310,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiqine.github.io/2018/11/19/html5特殊链接处理/">
+    <link itemprop="mainEntityOfPage" href="http://qiqine.github.io/2018/11/19/浏览器url编码/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Judy">
@@ -327,7 +327,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">html5特殊链接处理</h2>
+          <h2 class="post-title" itemprop="name headline">浏览器url编码</h2>
         
 
         <div class="post-meta">
@@ -339,7 +339,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-19T20:48:56+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-19T21:47:13+08:00">
                 2018-11-19
               </time>
             
@@ -358,8 +358,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/11/19/html5特殊链接处理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/19/html5特殊链接处理/" itemprop="commentCount"></span>
+                <a href="/2018/11/19/浏览器url编码/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/19/浏览器url编码/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -387,20 +387,44 @@
       
 
       
-        <p>在移动浏览器中实现拨打电话，调用sms发短信，发送email等功能很简单，只需要通过a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank" rel="noopener">href</a>链接简单的设置即可<br><a id="more"></a> </p>
-<h3 id="拨打电话"><a href="#拨打电话" class="headerlink" title="拨打电话"></a>拨打电话</h3><p>微信号开发不支持？需要另外处理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;tel:10086&quot;&gt;10086&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="发送短信"><a href="#发送短信" class="headerlink" title="发送短信"></a>发送短信</h3><p>发送短信的配置格式（可以同时给多个手机号发送短信，逗号隔开，body设置短信的内容）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sms:&lt;phone_number&gt;[,&lt;phone-number&gt;]*[?body=&lt;message_body&gt;]</span><br></pre></td></tr></table></figure>
-<p>such as:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;sms:10086,10010?body=hello word&quot;&gt;发送信息&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links" target="_blank" rel="noopener">发送邮件</a></h3><p>会默认打开系统的默认邮件发送</p>
+        <p>在开发过程中常常碰到编码问题，在url访问以及参数传递过程中有：encodeURIComponent，encodeURI，escape。<br>这些编码函数有什么区别，以及为什么需要编码，经常迷迷糊糊的用着。<br><a id="more"></a> </p>
+<h3 id="为什么需要编码"><a href="#为什么需要编码" class="headerlink" title="为什么需要编码"></a>为什么需要编码</h3><p>Url的编码格式采用的是ASCII码，而不是Unicode，这也就是说你不能在Url中包含任何非ASCII字符，例如中文。<br>Url编码的原则就是使用安全的字符去表示那些不安全的字符。</p>
 <blockquote>
-<p>subject设置邮件主题<br>cc抄送人<br>mailto发送人<br>bcc密送<br>body邮件内容</p>
+<p><a href="https://tools.ietf.org/html/rfc3986" target="_blank" rel="noopener">RFC3986</a>文档规定，Url中只允许包含以下四种：</p>
+<pre><code>1. 英文字母（a-zA-Z）
+2. 数字（0-9）
+3. -_.~ 4个特殊字符
+4. 所有保留字符，RFC3986中指定了以下字符为保留字符（英文字符）：!*&apos;();:@&amp;=+$,/?#[]
+</code></pre></blockquote>
+<h3 id="哪些字符需要编码"><a href="#哪些字符需要编码" class="headerlink" title="哪些字符需要编码"></a>哪些字符需要编码</h3><p>如果需要在URL中用到特殊字符，需要将这些特殊字符换成相应的十六进制的值</p>
+<ul>
+<li>保留字符：Url可以划分成若干个组件，协议、主机、路径等。有一些字符（:/?#[]@）是用作分隔不同组件的。例如:冒号用于分隔协议和主机，/用于分隔主机和路径，?用于分隔路径和查询参数，等等。还有一些字符（!$&amp;’()*+,;=）用于在每个组件中起到分隔作用的，如=用于表示查询参数中的键值对，&amp;符号用于分隔查询多个键值对。当组件中的普通数据包含这些特殊字符时，需要对其进行编码。</li>
+<li>不安全字符：有一些字符，当他们直接放在Url中的时候，可能会引起解析程序的歧义。这些字符被视为不安全字符。给去掉。</li>
+<li>引号以及&lt;&gt;：引号和尖括号通常用于在普通文本中起到分隔Url的作用</li>
+<li>#：通常用于表示书签或者锚点</li>
+<li>%：百分号本身用作对不安全字符进行编码时使用的特殊字符，因此本身需要编码</li>
+<li>{}|\^[]`~：某一些网关或者传输代理会篡改这些字符</li>
+</ul>
+<h3 id="如何对Url中的非法字符进行编码"><a href="#如何对Url中的非法字符进行编码" class="headerlink" title="如何对Url中的非法字符进行编码"></a>如何对Url中的非法字符进行编码</h3><p>Url编码通常也被称为百分号编码（Url Encoding，also known as percent-encoding），它的编码方式非常简单，使用%百分号加上两位的字符——0123456789ABCDEF——代表一个字节的十六进制形式。Url编码默认使用的字符集是US-ASCII。<br>比如:</p>
+<blockquote>
+<p>a在US-ASCII码中对应的字节是0x61，那么Url编码之后得到的就是%61，我们在地址栏上输入<a href="http://g.cn/search?q=%61%62%63" target="_blank" rel="noopener">http://g.cn/search?q=%61%62%63</a> ,实际上就等同于在google上搜索abc了。又如@符号在ASCII字符集中对应的字节为0x40，经过Url编码之后得到的是%40</p>
 </blockquote>
-<p>注：在pc端，如果刚开机或者系统默认邮件的进程被杀死，会导致无法打开发送功能，需要另外处理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&amp;bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email&amp;body=The%20body%20of%20the%20email&quot;&gt;</span><br><span class="line">  Send mail with cc, bcc, subject and body</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="打开Android-Market"><a href="#打开Android-Market" class="headerlink" title="打开Android Market"></a>打开Android Market</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;market://search?q=[query]&quot;&gt;Android Market link&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="GPS地图定位"><a href="#GPS地图定位" class="headerlink" title="GPS地图定位"></a>GPS地图定位</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;geopoint:[经度],[纬度]&quot;&gt;我的位置&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="Javascript中的escape-encodeURI和encodeURIComponent的区别"><a href="#Javascript中的escape-encodeURI和encodeURIComponent的区别" class="headerlink" title="Javascript中的escape, encodeURI和encodeURIComponent的区别"></a>Javascript中的escape, encodeURI和encodeURIComponent的区别</h3><p>共同点：<br>都是用于将不安全不合法的Url字符转换为合法的Url字符表示</p>
+<p>不同点：</p>
+<ol>
+<li><p>安全字符（即函数不会对这些字符进行编码）不同：<br> escape（69个）：<em>/@+-._0-9a-zA-Z<br> encodeURI（82个）：!#$&amp;’()</em>+,/:;=?@-.<em>~0-9a-zA-Z<br> encodeURIComponent（71个）：!’()*-.</em>~0-9a-zA-Z</p>
+</li>
+<li><p>对Unicode字符的编码方式不同：<br> 这三个函数对于ASCII字符的编码方式相同，均是使用百分号+两位十六进制字符来表示。<br> 但是对于 Unicode字符，escape的编码方式是%uxxxx，其中的xxxx是用来表示unicode字符的4位十六进制字符。这种方式已经被W3C废弃了。<br> encodeURI和encodeURIComponent则使用UTF-8对非ASCII字符进行编码，然后再进行百分号编码。这是RFC推荐的。因此建议尽可能的使用这两个函数替代escape进行编码。</p>
+</li>
+<li><p>适用场合不同：encodeURI被用作对一个完整的URI进行编码，而encodeURIComponent被用作对URI的一个组件进行编码。从上面提到的安全字符范围来看，encodeURIComponent编码的字符范围要比encodeURI的大。</p>
+<blockquote>
+<p>保留字符一般是用来分隔URI组件（一个URI可以被切割成多个组件）或者子组件（如URI中查询参数的分隔符），如：号用于分隔 scheme和主机，?号用于分隔主机和路径。由于encodeURI操纵的对象是一个完整的的URI，这些字符在URI中本来就有特殊用途，因此这些保 留字符不会被encodeURI编码，否则意义就变了。</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>组件内部有自己的数据表示格式，但是这些数据内部不能包含有分隔组件的保留字符，否则就会导致整个URI中组件的分隔混乱。因此对于单个组件使用encodeURIComponent，需要编码的字符就更多了。</p>
+</blockquote>
 
       
     </div>
@@ -446,11 +470,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/移动端/" rel="tag"># 移动端</a>
-          
-            <a href="/tags/CSS/" rel="tag"># CSS</a>
-          
-            <a href="/tags/html5/" rel="tag"># html5</a>
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
           
         </div>
       
@@ -463,8 +483,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/14/移动端去除浏览器默认样式/" rel="next" title="去除浏览器默认样式">
-                <i class="fa fa-chevron-left"></i> 去除浏览器默认样式
+              <a href="/2018/11/19/html5特殊链接处理/" rel="next" title="html5特殊链接处理">
+                <i class="fa fa-chevron-left"></i> html5特殊链接处理
               </a>
             
           </div>
@@ -473,8 +493,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/19/浏览器url编码/" rel="prev" title="浏览器url编码">
-                浏览器url编码 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/19/Async:Await异步编程/" rel="prev" title="Async/Await异步编程">
+                Async/Await异步编程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -633,7 +653,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#拨打电话"><span class="nav-number">1.</span> <span class="nav-text">拨打电话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发送短信"><span class="nav-number">2.</span> <span class="nav-text">发送短信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发送邮件"><span class="nav-number">3.</span> <span class="nav-text">发送邮件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开Android-Market"><span class="nav-number">4.</span> <span class="nav-text">打开Android Market</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GPS地图定位"><span class="nav-number">5.</span> <span class="nav-text">GPS地图定位</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要编码"><span class="nav-number">1.</span> <span class="nav-text">为什么需要编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哪些字符需要编码"><span class="nav-number">2.</span> <span class="nav-text">哪些字符需要编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何对Url中的非法字符进行编码"><span class="nav-number">3.</span> <span class="nav-text">如何对Url中的非法字符进行编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Javascript中的escape-encodeURI和encodeURIComponent的区别"><span class="nav-number">4.</span> <span class="nav-text">Javascript中的escape, encodeURI和encodeURIComponent的区别</span></a></li></ol></div>
             
 
           </div>
@@ -814,9 +834,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://qiqine.github.io/2018/11/19/html5特殊链接处理/';
-          this.page.identifier = '2018/11/19/html5特殊链接处理/';
-          this.page.title = 'html5特殊链接处理';
+          this.page.url = 'http://qiqine.github.io/2018/11/19/浏览器url编码/';
+          this.page.identifier = '2018/11/19/浏览器url编码/';
+          this.page.title = '浏览器url编码';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://qiqine.disqus.com/embed.js';
