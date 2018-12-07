@@ -126,18 +126,18 @@
 
 
 
-<meta name="description" content="问题描述： 曾经在开发的过程中，遇到删除一个数据，但是再次请求列表的接口数据没有发生变化，在ie下必现，safari偶现，chrome和Firefox下正常，后面发现是接口数据被浏览器缓存了。">
+<meta name="description" content="问题描述：曾经在开发的过程中，遇到删除一个数据，但是再次请求列表的接口数据没有发生变化，在ie下必现，safari偶现，chrome和Firefox下正常，后面发现是接口数据被浏览器缓存了。">
 <meta name="keywords" content="问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ajax请求缓存问题">
 <meta property="og:url" content="http://qiqine.github.io/2018/12/06/ajax请求缓存/index.html">
 <meta property="og:site_name" content="judy&#39;s blog">
-<meta property="og:description" content="问题描述： 曾经在开发的过程中，遇到删除一个数据，但是再次请求列表的接口数据没有发生变化，在ie下必现，safari偶现，chrome和Firefox下正常，后面发现是接口数据被浏览器缓存了。">
+<meta property="og:description" content="问题描述：曾经在开发的过程中，遇到删除一个数据，但是再次请求列表的接口数据没有发生变化，在ie下必现，safari偶现，chrome和Firefox下正常，后面发现是接口数据被浏览器缓存了。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-12-07T13:01:12.013Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax请求缓存问题">
-<meta name="twitter:description" content="问题描述： 曾经在开发的过程中，遇到删除一个数据，但是再次请求列表的接口数据没有发生变化，在ie下必现，safari偶现，chrome和Firefox下正常，后面发现是接口数据被浏览器缓存了。">
+<meta name="twitter:description" content="问题描述：曾经在开发的过程中，遇到删除一个数据，但是再次请求列表的接口数据没有发生变化，在ie下必现，safari偶现，chrome和Firefox下正常，后面发现是接口数据被浏览器缓存了。">
 
 
 
@@ -387,15 +387,8 @@
       
 
       
-        <p>问题描述：<br>
-曾经在开发的过程中，遇到删除一个数据，但是再次请求列表的接口数据没有发生变化，在ie下必现，safari偶现，chrome和Firefox下正常，后面发现是接口数据被浏览器缓存了。</p>
-<a id="more"></a>
-<p>解决办法：<br>
-方法一：设置请求的参数加时间戳</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url = url + &apos;&amp;t=&apos; + new Date().getTime();</span><br></pre></td></tr></table></figure>
-<p>方法二：设置header的cache-control<br>
-must-revalidate告诉浏览器缓存必须服从你给他们的任何信息。HTTP允许缓存在特殊条件下提供过时的表示；通过指定这个标头，您告诉缓存您希望它严格遵循您的规则</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(&quot;Cache-Control&quot;, &quot;private, no-cache, no-store, must-revalidate&quot;);</span><br></pre></td></tr></table></figure>
+        <p>问题描述：<br>曾经在开发的过程中，遇到删除一个数据，但是再次请求列表的接口数据没有发生变化，在ie下必现，safari偶现，chrome和Firefox下正常，后面发现是接口数据被浏览器缓存了。<br><a id="more"></a><br>解决办法：<br>方法一：设置请求的参数加时间戳<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url = url + &apos;&amp;t=&apos; + new Date().getTime();</span><br></pre></td></tr></table></figure></p>
+<p>方法二：设置header的cache-control<br>must-revalidate告诉浏览器缓存必须服从你给他们的任何信息。HTTP允许缓存在特殊条件下提供过时的表示；通过指定这个标头，您告诉缓存您希望它严格遵循您的规则<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(&quot;Cache-Control&quot;, &quot;private, no-cache, no-store, must-revalidate&quot;);</span><br></pre></td></tr></table></figure></p>
 <p>浏览器不会缓存post方法的接口数据，但是浏览器可能会缓存get方法的数据</p>
 
       

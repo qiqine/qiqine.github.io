@@ -386,23 +386,15 @@
       
 
       
-        <p>移动端常见的问题整理</p>
-<a id="more"></a>
-<h3 id="禁止用户缩放页面">禁止用户缩放页面</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="禁止将页面中的数字识别为电话号码">禁止将页面中的数字识别为电话号码</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="忽略对邮箱地址的识别">忽略对邮箱地址的识别</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;email=no&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="将网站添加到主屏幕快速启动方式-仅针对ios的safari有效">将网站添加到主屏幕快速启动方式（仅针对ios的safari有效）</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot; /&gt;</span><br><span class="line">&lt;!-- 可选default、black、black-translucent --&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="移动端如何定义字体font-family"><a href="http://www.cnblogs.com/PeunZhang/p/3592096.html" target="_blank" rel="noopener">移动端如何定义字体font-family</a></h3>
-<p>中文字体使用系统默认，英文用Helvetica</p>
+        <p>移动端常见的问题整理<br><a id="more"></a></p>
+<h3 id="禁止用户缩放页面"><a href="#禁止用户缩放页面" class="headerlink" title="禁止用户缩放页面"></a>禁止用户缩放页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="禁止将页面中的数字识别为电话号码"><a href="#禁止将页面中的数字识别为电话号码" class="headerlink" title="禁止将页面中的数字识别为电话号码"></a>禁止将页面中的数字识别为电话号码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="忽略对邮箱地址的识别"><a href="#忽略对邮箱地址的识别" class="headerlink" title="忽略对邮箱地址的识别"></a>忽略对邮箱地址的识别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;email=no&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="将网站添加到主屏幕快速启动方式（仅针对ios的safari有效）"><a href="#将网站添加到主屏幕快速启动方式（仅针对ios的safari有效）" class="headerlink" title="将网站添加到主屏幕快速启动方式（仅针对ios的safari有效）"></a>将网站添加到主屏幕快速启动方式（仅针对ios的safari有效）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot; /&gt;</span><br><span class="line">&lt;!-- 可选default、black、black-translucent --&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="移动端如何定义字体font-family"><a href="#移动端如何定义字体font-family" class="headerlink" title="移动端如何定义字体font-family"></a><a href="http://www.cnblogs.com/PeunZhang/p/3592096.html" target="_blank" rel="noopener">移动端如何定义字体font-family</a></h3><p>中文字体使用系统默认，英文用Helvetica</p>
 <figure class="highlight plain"><figcaption><span>移动端定义字体的代码 */</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">body&#123;font-family:Helvetica;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="禁止ios-android长按时下载图片">禁止iOS&amp;android长按时下载图片</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.css&#123;-webkit-touch-callout: none&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="禁止ios和android用户选中文字">禁止iOS和android用户选中文字</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.css&#123;-webkit-user-select:none&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="禁止iOS-amp-android长按时下载图片"><a href="#禁止iOS-amp-android长按时下载图片" class="headerlink" title="禁止iOS&amp;android长按时下载图片"></a>禁止iOS&amp;android长按时下载图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.css&#123;-webkit-touch-callout: none&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="禁止iOS和android用户选中文字"><a href="#禁止iOS和android用户选中文字" class="headerlink" title="禁止iOS和android用户选中文字"></a>禁止iOS和android用户选中文字</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.css&#123;-webkit-user-select:none&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -660,7 +652,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#禁止用户缩放页面"><span class="nav-number">1.</span> <span class="nav-text">禁止用户缩放页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#禁止将页面中的数字识别为电话号码"><span class="nav-number">2.</span> <span class="nav-text">禁止将页面中的数字识别为电话号码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#忽略对邮箱地址的识别"><span class="nav-number">3.</span> <span class="nav-text">忽略对邮箱地址的识别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将网站添加到主屏幕快速启动方式-仅针对ios的safari有效"><span class="nav-number">4.</span> <span class="nav-text">将网站添加到主屏幕快速启动方式（仅针对ios的safari有效）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端如何定义字体font-family"><span class="nav-number">5.</span> <span class="nav-text">移动端如何定义字体font-family</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#禁止ios-android长按时下载图片"><span class="nav-number">6.</span> <span class="nav-text">禁止iOS&amp;android长按时下载图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#禁止ios和android用户选中文字"><span class="nav-number">7.</span> <span class="nav-text">禁止iOS和android用户选中文字</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#禁止用户缩放页面"><span class="nav-number">1.</span> <span class="nav-text">禁止用户缩放页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#禁止将页面中的数字识别为电话号码"><span class="nav-number">2.</span> <span class="nav-text">禁止将页面中的数字识别为电话号码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#忽略对邮箱地址的识别"><span class="nav-number">3.</span> <span class="nav-text">忽略对邮箱地址的识别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将网站添加到主屏幕快速启动方式（仅针对ios的safari有效）"><span class="nav-number">4.</span> <span class="nav-text">将网站添加到主屏幕快速启动方式（仅针对ios的safari有效）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端如何定义字体font-family"><span class="nav-number">5.</span> <span class="nav-text">移动端如何定义字体font-family</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#禁止iOS-amp-android长按时下载图片"><span class="nav-number">6.</span> <span class="nav-text">禁止iOS&amp;android长按时下载图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#禁止iOS和android用户选中文字"><span class="nav-number">7.</span> <span class="nav-text">禁止iOS和android用户选中文字</span></a></li></ol></div>
             
 
           </div>
